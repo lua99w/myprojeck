@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Block and Inline Elements</title>
+    <style>
+    .link-banyak {
+        border: 3px solid;
+        background-color: #abda2b;
+        border-color: #202020;
+        
+    }
+    .border-box {
+        border-width:1px;
+        border-style:solid;
+        padding:5px;
+        border-color: #d62323;
+        
+    }
+    table {
+        width: auto;
+        margin: 20px 0;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+      }
+      th, td {
+        padding: 8px 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+          .code-info {
+          color: red; 
+          padding: 1px; 
+          background-color: #8f8f8fdc
+          }
+          hr {
+          border: none;
+          height: 5px;
+          background-image: linear-gradient(90deg, blue, purple, pink, blue, purple, pink);
+          background-size: 300% 100%;
+          animation: moveLine 3s linear infinite;
+          }
+  
+          @keyframes moveLine {
+              0%  {
+              background-position: 100% 0;
+              }
+              100% {
+              background-position: -100% 0;
+              }
+          }
+          #code-url {
+              color: red; 
+              padding: 1px; 
+              background-color: 
+              #8f8f8fdc;
+          }
+  
+  
+          #biru {
+              color: rgb(0, 135, 245);
+          }
+          
+          html, body {
+              cursor: url("cutom-cursor.png"), auto;
+              font-family: "Roboto", sans-serif;
+              font-size: 16px;
+              line-height: 1.6;
+              letter-spacing: 0.5px;
+              font-weight: normal;
+              color: #333;
+              background-color: #c9f7ff;
+              margin: 0;
+              padding: 0;
+              user-select: none;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+          }
+  
+          .catatan {
+              background-color: #51c760;
+              border: 1px solid #ddd;
+              padding: 20px;
+              margin: 20px 0;
+              border-radius: 8px;
+              font-family: Arial, sans-serif;
+          }
+  
+          .catatan p {
+              font-size: 16px;
+              line-height: 1.6;
+              color: #313131;
+          }
+  
+          .ringkasan {
+              margin-left: 20px;
+          }
+  
+          .header-no-one {
+              margin: 40px 40px 0;
+          }
+  
+          .code-preview-box {
+          background-color: #f4f4f4;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          margin: 5px 0;
+          font-family: "Fira Code", monospace;
+          font-size: 13px;
+          color: #333;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+      }
+  
+      .code-preview-box code {
+          display: block;
+          background-color: #e8e8e8;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 13px;
+          overflow-x: auto;
+          max-height: 250px;
+          font-family: "Fira Code", monospace;
+          line-height: 1.4;
+      }
+  
+  
+      p {
+          margin-left: 20px;
+          margin-bottom: 15px;
+          line-height: 1.6;
+      }
+          
+  
+  
+      h2 {
+          margin-left: 20px;
+          font-size: 1.6em;
+          color: #333;
+          margin-bottom: 3px;
+      }
+      </style>  
+</head>
+<body>
+    <div class="header-no-one">
+        <h1>HTML Block and Inline Elements</h1>
+    </div>
+<hr>
+    <p>Setiap elemen HTML memiliki nilai tampilan default, tergantung pada jenis elemennya.</p>
+    <p>Dua nilai tampilan yang paling umum adalah blok dan sebaris.</p>
+<hr>
+    <h2>Elemen tingkat blok</h2>
+    <p>Elemen tingkat blok selalu dimulai pada baris baru, dan peramban secara otomatis menambahkan spasi (margin) sebelum dan sesudah elemen.</p>
+    <p>Elemen tingkat blok selalu menempati lebar penuh yang tersedia (membentang ke kiri dan kanan sejauh mungkin).</p>
+    <p>Dua elemen blok yang umum digunakan adalah : <span class="code-info">&lt;p&gt;</span>dan<span class="code-info">&lt;div&gt;</span></p>
+    <p>Elemen ini <span class="code-info">&lt;p&gt;</span>mendefinisikan paragraf dalam dokumen HTML.</p>
+    <p>Elemen <span class="code info">&lt;div&gt;</span> mendefinisikan divisi atau bagian dalam dokumen HTML.</p>
+    <div class="border-box">Elemen &lt;p&gt; adalah elemen tingkat blok.</div>
+    <div class="border-box">Elemen &lt;div&gt; adalah elemen tingkat blok.</div>
+    <div class="code-preview-box">
+        <h1>Contoh</h1>
+        <code>
+            &lt;p&gt;Hello World&lt;/p&gt;
+            &lt;div&gt;Hello World&lt;/div&gt;
+        </code>
+    </div>
+<hr>
+    <p>Berikut adalah elemen tingkat blok dalam HTML:</p>
+    <p>banyak kli link  <a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank" onclick="alert(`Blajar yang rajin ingat orang tua ya`)"><span class="link-banyak">click aja ini</span></a></p>
+<hr>
+    <div class="header-no-one"><h1>Inline Elements</h1></div>
+    <p>Elemen sebaris tidak dimulai pada baris baru.<br>
+    Elemen sebaris hanya mengambil lebar seperlunya saja.</p>
+    <p>Ini adalah <span class="border-box">elemen &lt;span&gt; di dalam paragraf</span></p>
+    <div class="code-preview-box">
+        <h2>Contoh
+            <code>
+                &lt;span&gt;Hello World&lt;/span&gt;
+            </code></h2>
+    </div>
+<hr>
+    <p>Berikut ini adalah elemen sebaris dalam HTML:</p>
+    <p>banyak kli link  <a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank" onclick="alert(`Blajar yang rajin ingat orang tua ya`)"><span class="link-banyak">click aja ini</span></a></p>
+    <div class="catatan">
+        <p><strong>Catatan:</strong>Elemen sebaris tidak dapat berisi elemen tingkat blok!</p>
+    </div>
+<hr>
+    <div class="header-no-one">
+        <h1>Elemen &lt;div&gt;</h1>
+    </div>
+
+    <p>Elemen ini <span class="border-box">&lt;div&gt;</span> sering digunakan sebagai wadah untuk elemen HTML lainnya.</p>
+    <p>Elemen tersebut <span class="border-box">&lt;div&gt;</span> tidak memiliki atribut yang diperlukan, tetapi style, class dan id bersifat umum.</p>
+    <p>Bila digunakan bersama CSS, <span class="border-box">&lt;div&gt;</span> elemen ini dapat digunakan untuk memberi gaya pada blok konten:</p>
+    <p><span class="border-box">Contoh</span></p>
+    <div class="code-preview-box">
+        <h2>Contoh<code>&lt;div style="background-color:black;color:white;padding:20px;"&gt;
+            &lt;h2&gt;London&lt;/h2&gt;
+            &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+          &lt;/div&gt;</code></h2>
+    </div>
+    <p>Anda akan mempelajari lebih lanjut tentang &lt;div&gt;unsur tersebut pada bab <a href="https://www.w3schools.com/html/html_div.asp" target="_blank" onclick="alert(`
+    ya bagus belajar lgi`)">berikutnya</a>.</p>
+<hr>
+    <div class="header-no-one">
+        <h1>Elemen &lt;span&gt;
+            </h1></div>
+            <p>Elemen <span class="code-info">&lt;span&gt;</span> merupakan wadah sebaris yang digunakan untuk menandai bagian teks atau bagian dokumen.</p>
+            <p>Elemen tersebut <span class="code-info">&lt;span&gt;</span> tidak memiliki atribut yang diperlukan, tetapi style, class, dan id bersifat umum.</p>
+            <p>Bila digunakan bersama CSS, <span class="code-info">&lt;span&gt;</span> elemen ini dapat digunakan untuk memberi gaya pada bagian teks:</p>
+        </body>
+    <div class="code-preview-box">
+        <h2>Contoh<code>
+            &lt;p&gt;Elemen &lt;span class="code-info"&gt;&lt;/span&gt; merupakan wadah sebaris yang digunakan untuk menandai bagian teks atau bagian dokumen.&lt;/p&gt;
+            &lt;p&gt;Elemen tersebut &lt;span class="code-info"&gt;&lt;/span&gt; tidak memiliki atribut yang diperlukan, tetapi style, class, dan id bersifat umum.&lt;/p&gt;
+            &lt;p&gt;Bila digunakan bersama CSS, &lt;span class="code-info"&gt;&lt;/span&gt; elemen ini dapat digunakan untuk memberi gaya pada bagian teks:&lt;/p&gt;</code></h2>
+    </div>
+
+    <span class="catatan">
+        <p>Elemen tingkat blok selalu dimulai pada baris baru dan menempati lebar penuh yang tersedia.</p>
+        <p>Elemen sebaris tidak dimulai pada baris baru dan hanya mengambil lebar sebanyak yang diperlukan.</p>
+        <p>Elemen ini &lt;div&gt; adalah level blok dan sering digunakan sebagai wadah untuk elemen HTML lainnya.</p>
+        <p>Elemen &lt;span&gt; adalah wadah sebaris yang digunakan untuk menandai bagian teks atau bagian dokumen</p>
+    </span>
+</body>
+</html> 

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - CSS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .ringkasan {
+        margin-left: 20px;
+      }
+      .header-no-one {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 40px;
+      }
+      html,
+      body {
+        cursor: url("cutom-cursor.png"), auto;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        font-weight: normal;
+        color: #333;
+        background-color: #c9f7ff;
+        margin: 0;
+        padding: 0;
+        user-select: none; /* Mencegah seleksi teks */
+        -webkit-user-select: none; /* Untuk browser berbasis WebKit (Chrome, Safari) */
+        -moz-user-select: none; /* Untuk Firefox */
+        -ms-user-select: none; /* Untuk Internet Explorer */
+      }
+      /* Styling untuk box kode */
+      .code-preview-box {
+        background-color: #f4f4f4; /* Latar belakang abu-abu terang */
+        padding: 15px; /* Padding di dalam kotak */
+        border: 1px solid #ddd; /* Border abu-abu */
+        border-radius: 5px; /* Sudut yang membulat */
+        margin: 10px 0; /* Jarak di luar box */
+        font-family: "Fira Code", monospace;
+        font-size: 14px; /* Ukuran font standar */
+        color: #333; /* Warna teks */
+        white-space: pre-wrap; /* Agar baris panjang tetap terbaca */
+        word-wrap: break-word; /* Memastikan teks tidak meluap */
+      }
+      /* Styling untuk tag code di dalam box */
+      .code-preview-box code {
+        display: block; /* Agar kode tampil terpisah */
+        background-color: #e8e8e8; /* Latar belakang untuk kode */
+        padding: 10px; /* Padding sekitar kode */
+        border: 1px solid #ccc; /* Border tipis di sekitar kode */
+        border-radius: 4px; /* Sudut border yang membulat */
+        font-size: 14px; /* Ukuran font untuk kode */
+        overflow-x: auto; /* Agar kode panjang bisa di-scroll horizontal */
+        max-height: 300px; /* Batasi tinggi box kode */
+        font-family: "Fira Code", monospace;
+      }
+      p {
+        margin-left: 20px;
+      }
+      h2 {
+        margin-left: 20px;
+      }
+      /* Styling untuk elemen p, h2, dll (CSS Internal) */
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #333;
+        background-color: #c9f7ff;
+      }
+
+      h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+    </style>
+    <script>
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+      document.addEventListener("copy", function (e) {
+        e.preventDefault();
+        alert("gk bisa ya enak aja mau salin salin");
+      });
+    </script>
+  </head>
+  <body>
+    <h1 class="header-no-one">HTML Styles - CSS</h1>
+    <hr />
+    <p>
+      CSS adalah singkatan dari Cascading Style Sheets. CSS menghemat banyak
+      pekerjaan. CSS dapat mengendalikan tata letak beberapa halaman web
+      sekaligus.
+    </p>
+    <hr />
+    <h2>Apa itu CSS?</h2>
+    <p>
+      Cascading Style Sheets (CSS) digunakan untuk memformat tata letak halaman
+      web. Dengan CSS, Anda dapat mengontrol warna, font, ukuran teks, jarak
+      antar elemen, bagaimana elemen diposisikan dan ditata, gambar latar
+      belakang atau warna latar belakang apa yang akan digunakan, tampilan
+      berbeda untuk perangkat dan ukuran layar yang berbeda, dan banyak lagi!
+    </p>
+    <hr />
+    <p>
+      <mark
+        >Kiat: Kata cascading berarti bahwa gaya yang diterapkan pada elemen
+        induk juga akan berlaku pada semua elemen anak dalam induk. Jadi, jika
+        Anda menyetel warna teks isi menjadi "biru", semua judul, paragraf, dan
+        elemen teks lainnya dalam isi juga akan mendapatkan warna yang
+        sama.</mark
+      >
+    </p>
+    <p>(Kecuali Anda menentukan hal lain!)</p>
+    <hr />
+    <h2>CSS dapat ditambahkan ke dokumen HTML dengan 3 cara:</h2>
+    <ul>
+      <li>
+        <strong>Inline</strong> - dengan menggunakan atribut
+        <code>style</code> di dalam elemen HTML
+      </li>
+      <li>
+        <strong>Internal</strong> - dengan menggunakan
+        <code>&lt;style&gt;</code> elemen di bagian <code>&lt;head&gt;</code>
+      </li>
+      <li>
+        <strong>Eksternal</strong> - dengan menggunakan
+        <code>&lt;link&gt;</code> elemen untuk menautkan ke file CSS eksternal
+      </li>
+    </ul>
+    <div class="code-preview-box">
+      <code>
+        <h2>contoh</h2>
+        &lt;h1 style="color:blue;"&gt;A Blue Heading&lt;/h1&gt; &lt;p
+        style="color:red;"&gt;A red paragraph.&lt;/p&gt;
+      </code>
+    </div>
+    <hr />
+    <h2>CSS internal</h2>
+    <p>
+      <strong>CSS internal</strong> digunakan untuk menentukan gaya untuk satu
+      halaman HTML.
+    </p>
+    <p>
+      CSS internal didefinisikan di bagian <code>&lt;head&gt;</code> halaman
+      HTML, dalam suatu <code>&lt;style&gt;</code> elemen.
+    </p>
+    <p>
+      Contoh berikut menetapkan warna teks
+      <strong>SEMUA elemen &lt;h1&gt;</strong> (pada halaman tersebut) menjadi
+      biru, dan warna teks <strong>SEMUA elemen &lt;p&gt;</strong> menjadi
+      merah. Selain itu, halaman akan ditampilkan dengan warna latar belakang
+      "powderblue":
+    </p>
+    <>
+    <div class="code-preview-box">
+      <code>
+        <h2>contoh</h2>
+        &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;style&gt; body
+        {background-color: powderblue;} h1 {color: blue;} p {color: red;}
+        &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;This is a
+        heading&lt;/h1&gt; &lt;p&gt;This is a paragraph.&lt;/p&gt; &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </div>
+    <hr />
+    <h2>CSS Eksternal</h2>
+    <p>
+      Lembar gaya eksternal digunakan untuk menentukan gaya untuk banyak halaman
+      HTML.
+    </p>
+    <p>
+      Untuk menggunakan lembar gaya <strong>EKSTERNAL</strong>, tambahkan tautan
+      ke lembar gaya tersebut di &lt;head&gt;bagian setiap halaman HTML:
+    </p>
+    <div class="code-preview-box">
+      <code>
+        <h2>Contoh</h2>
+        &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;link
+        rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt; &lt;/head&gt;
+        &lt;body&gt; &lt;h1&gt;This is a heading&lt;/h1&gt; &lt;p&gt;This is a
+        paragraph.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;
+      </code>
+    </div>
+    <p>
+      Lembar gaya eksternal dapat ditulis dalam editor teks apa pun. File tidak
+      boleh berisi kode HTML apa pun, dan harus disimpan dengan ekstensi .css.
+    </p>
+    <p>Berikut ini adalah tampilan file "styles.css":</p>
+    <div class="code-preview-box">
+      <code>
+        <h2><b>style.css</b></h2>
+        &lt;style&gt; body { background-color: powderblue; } h1 { color: blue; }
+        p { color: red; } &lt;/style&gt;
+      </code>
+    </div>
+    <p>
+      <mark
+        >Kiat: Dengan lembar gaya eksternal, Anda dapat mengubah tampilan
+        seluruh situs web, dengan mengubah satu berkas!</mark
+      >
+    </p>
+    <hr />
+    <h2>Warna, Font, dan Ukuran CSS</h2>
+    <p>
+      Di sini, kami akan menunjukkan beberapa properti CSS yang umum digunakan.
+      Anda akan mempelajarinya lebih lanjut nanti.
+    </p>
+    <p>Properti CSS <mark>Color</mark> warna teks yang akan digunakan</p>
+    <p>
+      Properti CSS <mark>font-family</mark> mendefinisikan font yang akan
+      digunakan.
+    </p>
+    <p>
+      Properti CSS <mark>font-size</mark> menentukan ukuran teks yang akan
+      digunakan.
+    </p>
+    <div class="code-preview-box">
+      <h2>Contoh</h2>
+      <p>Penggunaan properti warna CSS, font-family dan font-size:</p>
+      <code>
+        &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;style&gt; h1 {
+        color: blue; font-family: verdana; font-size: 300%; } p { color: red;
+        font-family: courier; font-size: 160%; } &lt;/style&gt; &lt;/head&gt;
+        &lt;body&gt; &lt;h1&gt;This is a heading&lt;/h1&gt; &lt;p&gt;This is a
+        paragraph.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;
+      </code>
+    </div>
+    <hr />
+    <h2>CSS Border</h2>
+    <p>
+      <b>Properti CSS</b> <mark>Border</mark> mendefinisikan batas di sekitar
+      elemen HTML.
+    </p>
+    <p>
+      <b>Tip:</b> Anda dapat menentukan batas untuk hampir semua elemen HTML.
+    </p>
+    <div class="code-preview-box">
+      <h2>Contoh</h2>
+      <p>Penggunaan properti border CSS:</p>
+      <code> p { border: 2px solid powderblue; } </code>
+    </div>
+    <hr />
+    <h2>Padding CSS</h2>
+    <p>
+      Properti <mark>CSS padding</mark> mendefinisikan bantalan (spasi) antara
+      teks dan batas.
+    </p>
+    <div class="code-preview-box">
+      <h2>Contoh</h2>
+      <p>Penggunaan properti border dan padding CSS:</p>
+      <code> p { border: 2px solid powderblue; padding: 30px; } </code>
+    </div>
+    <hr />
+    <h2>Margin CSS</h2>
+    <p>
+      Properti CSS <mark>margin</mark> mendefinisikan margin (spasi) di luar
+      batas.
+    </p>
+    <p>ContohPenggunaan properti border dan margin CSS:</p>
+    <div class="code-preview-box">
+      <h2>Contoh</h2>
+      <p>Penggunaan properti border dan margin CSS:</p>
+      <code> p { border: 2px solid powderblue; margin: 50px; } </code>
+    </div>
+    <hr />
+    <h2>Tautan ke CSS Eksternal</h2>
+    <p>
+      Lembar gaya eksternal dapat direferensikan dengan URL lengkap atau dengan
+      jalur relatif ke halaman web saat ini.
+    </p>
+    <div class="code-preview-box">
+      <h2>Contoh</h2>
+      <p>Contoh ini menggunakan URL lengkap untuk menautkan ke lembar gaya:</p>
+      <code>
+        &lt;link rel="stylesheet"
+        href="https://www.w3schools.com/html/styles.css"&gt;
+      </code>
+    </div>
+    <hr />
+    <div class="code-preview-box">
+      <h2>Contoh</h2>
+      <p>
+        Contoh ini terhubung ke lembar gaya yang terletak di folder html pada
+        situs web saat ini:
+      </p>
+      <code> &lt;link rel="stylesheet" href="/html/styles.css"&gt; </code>
+    </div>
+    <div class="code-preview-box">
+      <h2>Contoh</h2>
+      <p>
+        Contoh ini tertaut ke lembar gaya yang terletak di folder yang sama
+        dengan halaman saat ini:
+      </p>
+      <code> &lt;link rel="stylesheet" href="styles.css"&gt; </code>
+    </div>
+    <div class="ringkasan">
+      <h1>Ringkasan Bab</h1>
+
+      <p>Gunakan atribut HTML <code>style</code> untuk gaya sebaris</p>
+      <p>
+        Gunakan elemen HTML <code>&lt;style&gt;</code> untuk menentukan CSS
+        internal
+      </p>
+      <p>
+        Gunakan elemen HTML <code>&lt;link&gt;</code> untuk merujuk ke file CSS
+        eksternal
+      </p>
+      <p>
+        Gunakan elemen HTML <code>&lt;head&gt;</code> untuk menyimpan elemen
+        <code>&lt;style&gt;</code> dan <code>&lt;link&gt;</code>
+      </p>
+      <p>Gunakan properti CSS <code>color</code> untuk warna teks</p>
+      <p>Gunakan properti CSS <code>font-family</code> untuk font teks</p>
+      <p>Gunakan properti CSS <code>font-size</code> untuk ukuran teks</p>
+      <p>Gunakan properti CSS <code>border</code> untuk batas</p>
+      <p>
+        Gunakan properti CSS <code>padding</code> untuk spasi di dalam
+        perbatasan
+      </p>
+      <p>Gunakan properti CSS <code>margin</code> untuk spasi di luar batas</p>
+    </div>
+  </body>
+</html>

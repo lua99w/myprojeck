@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | LINK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+    <style>
+        hr {
+        border: none;
+        height: 5px;
+        background-image: linear-gradient(90deg, blue, purple, pink, blue, purple, pink);
+        background-size: 300% 100%;
+        animation: moveLine 3s linear infinite;
+        }
+
+        @keyframes moveLine {
+            0%  {
+            background-position: 100% 0;
+            }
+            100% {
+            background-position: -100% 0;
+            }
+        }
+        #code-url {
+            color: red; 
+            padding: 1px; 
+            background-color: 
+            #8f8f8fdc;
+        }
+
+
+        #biru {
+            color: rgb(0, 135, 245);
+        }
+        
+        html, body {
+            cursor: url("cutom-cursor.png"), auto;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            font-weight: normal;
+            color: #333;
+            background-color: #c9f7ff;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .catatan {
+            background-color: #51c760;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        .catatan p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #313131;
+        }
+
+        .ringkasan {
+            margin-left: 20px;
+        }
+
+        .header-no-one {
+            margin: 40px 40px 0;
+        }
+
+        .code-preview-box {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 0;
+        font-family: "Fira Code", monospace;
+        font-size: 13px;
+        color: #333;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .code-preview-box code {
+        display: block;
+        background-color: #e8e8e8;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 13px;
+        overflow-x: auto;
+        max-height: 250px;
+        font-family: "Fira Code", monospace;
+        line-height: 1.4;
+    }
+
+
+    p {
+        margin-left: 20px;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+        
+
+
+    h2 {
+        margin-left: 20px;
+        font-size: 1.6em;
+        color: #333;
+        margin-bottom: 3px;
+    }
+    </style>
+    <script>
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener("copy", function (e) {
+            e.preventDefault();
+            alert("gk bisa ya enak aja mau salin salin");
+        });
+    </script>
+</head>
+<body>
+    <div class="header-no-one">
+        <h1>LINK HTML</h1>
+    </div>
+    <hr>
+    <p>Tautan ditemukan di hampir semua halaman web. Tautan memungkinkan pengguna untuk mengeklik dari satu halaman ke halaman lainnya.</p>
+    <h2>Tautan HTML - Hyperlink</h2>
+    <p>Tautan HTML adalah hyperlink.</p>
+    <p>Anda dapat mengeklik tautan dan melompat ke dokumen lain.</p>
+    <p>Anda menggerakkan mouse pada suatu tautan, panah mouse akan berubah menjadi tangan kecil.</p>
+    <div class="catatan">
+        <p>Catatan: Tautan tidak harus berupa teks. Tautan dapat berupa gambar atau elemen HTML lainnya!</p>
+    </div>
+<hr>
+    <h2>Tautan HTML - Sintaks</h2>
+    <p>Tag HTML &lt;a&gt;mendefinisikan hyperlink. Tag ini memiliki sintaksis sebagai berikut:</p>
+    <div class="code-preview-box">
+        <h2>Contoh</h2>
+        <code>
+            <p>&lt;a href=&quot;url&quot;&gt;link text&lt;/a&gt;</p>
+        </code>
+    </div>
+        <p>Atribut yang paling penting dari &lt;a&gt; elemen adalah hrefatribut, yang menunjukkan tujuan tautan.</p>
+        <p>Teks <i>tautan</i> adalah bagian yang akan terlihat oleh pembaca.</p>
+        <p>Mengklik teks tautan akan mengarahkan pembaca ke alamat URL yang ditentukan.</p>
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+            <code>
+                <pre><code>&lt;a href=&quot;https://www.w3schools.com/&quot;&gt;Visit W3Schools.com!&lt;/a&gt;</code></pre>
+            </code>
+        </div>
+        <p>Secara default, tautan akan muncul seperti berikut di semua browser:</p>
+        <ul>
+            <li>Tautan yang belum dikunjungi diberi garis bawah dan berwarna biru</li>
+            <li>Tautan yang telah dikunjungi digarisbawahi dan berwarna ungu</li>
+            <li>Tautan aktif digaris bawahi dan berwarna merah</li>
+        </ul>
+<hr>        
+        <h2>Tautan HTML - Atribut</h2>
+        <p>Secara default, halaman yang ditautkan akan ditampilkan di jendela browser saat ini. Untuk mengubahnya,</p>
+        <p>Anda harus menentukan target lain untuk tautan tersebut.</p>
+        <p>Atribut  <code style="color: red; padding: 1px; background-color: #8f8f8fdc;">target</code>  menentukan tempat membuka dokumen yang ditautkan.</p>
+        <p>Atribut <code style="color: red; padding: 1px; background-color: #8f8f8fdc;">target</code> dapat memiliki salah satu nilai berikut:</p>
+        <ul>
+            <li><code style="color: red; padding: 1px; background-color: #8f8f8fdc;">_self</code> - Default. Membuka dokumen di jendela/tab yang sama saat diklik</li>
+            <li><code style="color: red; padding: 1px; background-color: #8f8f8fdc;">_blank</code> - Membuka dokumen di jendela atau tab baru</li>
+            <li><code style="color: red; padding: 1px; background-color: #8f8f8fdc;">_parent</code> - Membuka dokumen di bingkai induk</li>
+            <li><code style="color: red; padding: 1px; background-color: #8f8f8fdc;">_top</code> - Membuka dokumen di badan penuh jendela</li>
+          </ul>
+          <div class="code-preview-box">
+            <h2>Contoh</h2>
+            <p>Gunakan target="_blank" untuk membuka dokumen tertaut di jendela atau tab browser baru:</p>
+                <code>
+                    <code>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;Visit W3Schools!&lt;/a&gt;</code>
+                </code>
+          </div>
+<hr>
+        <h2>URL Absolut vs. URL Relatif</h2>
+        <p>Kedua contoh di atas menggunakan <strong>URL absolut</strong> (alamat web lengkap) dalam <span id="code-url">href</span> atribut.</p>
+        <p>Tautan lokal (tautan ke halaman dalam situs web yang sama) ditentukan dengan <strong>URL relatif</strong> (tanpa bagian "https://www"):</p>
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+                <code>
+                    <code>&lt;h2&gt;Absolute URLs&lt;/h2&gt;
+                        &lt;p&gt;&lt;a href="https://www.w3.org/"&gt;W3C&lt;/a&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;a href="https://www.google.com/"&gt;Google&lt;/a&gt;&lt;/p&gt;
+                        
+                        &lt;h2&gt;Relative URLs&lt;/h2&gt;
+                        &lt;p&gt;&lt;a href="html_images.asp"&gt;HTML Images&lt;/a&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;a href="/css/default.asp"&gt;CSS Tutorial&lt;/a&gt;&lt;/p&gt;</code>
+                </code>
+            </div>
+<hr>
+        <h2>Tautan HTML - Gunakan Gambar sebagai Tautan</h2>
+        Untuk menggunakan gambar sebagai tautan, cukup masukkan <span id="code-url">&lt;img&gt;</span> tag di dalam <span id="code-url">&lt;a&gt;</span>tag:
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+                <code>
+                    &lt;a href="default.asp"&gt;&lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"&gt;&lt;/a&gt;
+                </code>
+            </div>
+<hr>
+        <h2>Tautan ke Alamat Email</h2>
+        <p>Gunakan <span id="code-url">mailto:</span>di dalam <span id="code-url">href</span> atribut untuk membuat tautan yang membuka program email pengguna (agar mereka dapat mengirim email baru):</p>
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+                <code>
+                    &lt;a href="mailto:someone@example.com"&gt;Send email&lt;/a&gt;
+                </code>
+            </div>
+<hr>
+        <h2>Tombol sebagai Tautan</h2>
+        <p>Untuk menggunakan tombol HTML sebagai tautan, Anda harus menambahkan beberapa kode JavaScript.</p>
+        <p>JavaScript memungkinkan Anda menentukan apa yang terjadi pada peristiwa tertentu, seperti mengklik tombol:</p>
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+                <code>
+                    &lt;button onclick="document.location='default.asp'"&gt;HTML Tutorial&lt;/button&gt;
+                </code>
+            </div>
+        <div class="catatan">
+            <p>Kiat: Pelajari lebih lanjut tentang JavaScript di Tutorial JavaScript kami.</p>
+        </div>        
+<hr>
+        <h2>Judul Tautan</h2>
+        <p>Atribut ini <span id="code-url">title</span> menentukan informasi tambahan tentang suatu elemen. Informasi ini paling sering</p>
+        <p>ditampilkan sebagai teks keterangan alat saat mouse bergerak di atas elemen tersebut.</p>
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+                <code>
+                    &lt;a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section"&gt;Visit our HTML Tutorial&lt;/a&gt;
+                </code>
+            </div>
+<hr>
+        <h2>Lebih lanjut tentang URL Absolut dan URL Relatif</h2>
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+            <p>Gunakan URL lengkap untuk menautkan ke halaman web: </p>
+            <code>
+                &lt;a href="https://www.w3schools.com/html/default.asp"&gt;HTML tutorial&lt;/a&gt;
+            </code>
+        </div>
+<hr>
+        <div class="code-preview-box">
+            <h2>contoh</h2>
+            <p>Tautan ke halaman yang terletak di folder html di situs web saat ini:</p>
+            <code>
+                &lt;a href="/html/default.asp"&gt;HTML tutorial&lt;/a&gt;
+            </code>
+        </div>
+<hr>
+        <div class="code-preview-box">
+            <h2>contoh</h2>
+            <p>Tautan ke halaman yang terletak di folder yang sama dengan halaman saat ini: </p>
+            <code>
+                &lt;a href="default.asp"&gt;HTML tutorial&lt;/a&gt;
+            </code>
+        </div>
+<hr>
+        <div class="catatan">You can read more about file paths in the chapter <a href="https://www.w3schools.com/html/html_filepaths.asp">HTML File Paths</a></div>
+<hr>
+        <h2>HTML File Paths</h2>
+        <ul>
+            <li>Gunakan <span id="code-url">&lt;a&gt;</span> elemen untuk menentukan tautan</li>
+            <li>Gunakan <span id="code-url">href</span> atribut untuk menentukan alamat tautan</li>
+            <li>Gunakan <span id="code-url">target</span> atribut untuk menentukan tempat membuka dokumen tertaut</li>
+            <li>Gunakan <span id="code-url">&lt;img&gt;</span> elemen (di dalam <span id="code-url">&lt;a&gt;</span>) untuk menggunakan gambar sebagai tautan</li>
+            <li>Gunakan <span id="code-url">mailto:</span> skema di dalam <span id="code-url">href</span> atribut untuk membuat tautan yang membuka program email pengguna</li>
+        </ul>
+</body>
+</html>

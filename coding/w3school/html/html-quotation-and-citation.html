@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quotation and Citation Elements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+    document.addEventListener('copy', function(e) {
+        e.preventDefault(); 
+        alert("gk bisa ya enak aja mau salin salin"); 
+    });
+</script>
+<style>
+    .header-no-one {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 40px;
+    }
+    html, body {
+    cursor: url('cutom-cursor.png'), auto;
+    }
+    body {
+      font-family: 'Roboto', sans-serif; 
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: 0.5px; 
+      font-weight: normal; 
+      color: #333; 
+      background-color:#c9f7ff ;
+      margin: 0;
+      padding: 0;
+      user-select: none; /* Mencegah seleksi teks */
+      -webkit-user-select: none; /* Untuk browser berbasis WebKit (Chrome, Safari) */
+      -moz-user-select: none; /* Untuk Firefox */
+      -ms-user-select: none; /* Untuk Internet Explorer */
+    }
+    /* Styling untuk box kode */
+.code-preview-box {
+    background-color: #f4f4f4; /* Latar belakang abu-abu terang */
+    padding: 15px; /* Padding di dalam kotak */
+    border: 1px solid #ddd; /* Border abu-abu */
+    border-radius: 5px; /* Sudut yang membulat */
+    margin: 20px 0; /* Jarak di luar box */
+    font-family: 'Courier New', Courier, monospace; /* Font monospace */
+    font-size: 14px; /* Ukuran font standar */
+    color: #333; /* Warna teks */
+    white-space: pre-wrap; /* Agar baris panjang tetap terbaca */
+    word-wrap: break-word; /* Memastikan teks tidak meluap */
+}
+
+/* Styling untuk tag code di dalam box */
+.code-preview-box code {
+    display: block; /* Agar kode tampil terpisah */
+    background-color: #e8e8e8; /* Latar belakang untuk kode */
+    padding: 10px; /* Padding sekitar kode */
+    border: 1px solid #ccc; /* Border tipis di sekitar kode */
+    border-radius: 4px; /* Sudut border yang membulat */
+    font-size: 14px; /* Ukuran font untuk kode */
+    overflow-x: auto; /* Agar kode panjang bisa di-scroll horizontal */
+    max-height: 300px; /* Batasi tinggi box kode */
+}
+p {
+    margin-left: 20px;
+}
+h2 {
+    margin-left: 20px;
+}
+</style>    
+</head>
+<body>
+    <h2 class="header-no-one">In this chapter we will go through the &lt;code&gt;&lt;blockquote&gt;,&lt;q&gt;, &lt;abbr&gt;, &lt;address,&gt; &lt;cite&gt;, and &lt;bdo&gt;</code> HTML elements.</h2>
+<hr>
+    <p>Berikut adalah kutipan dari situs web WWF:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        Selama 60 tahun, WWF telah bekerja untuk membantu manusia dan alam berkembang. Sebagai organisasi konservasi terkemuka di dunia, WWF bekerja di hampir 100 negara. Di setiap tingkat, kami bekerja sama dengan orang-orang di seluruh dunia untuk mengembangkan dan menyampaikan solusi inovatif yang melindungi komunitas, satwa liar, dan tempat-tempat tempat mereka tinggal.
+    </blockquote>
+    
+    <!-- Box untuk pratinjau kode HTML -->
+    <div class="code-preview-box">
+        <code>
+            <h2><b>Contoh</b></h2>
+    &lt;p&gt;Berikut adalah kutipan dari situs web WWF:&lt;/p&gt;
+    &lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;
+    Selama 60 tahun, WWF telah bekerja untuk membantu manusia dan alam berkembang. Sebagai organisasi konservasi terkemuka di dunia, WWF bekerja di hampir 100 negara. Di setiap tingkat, kami bekerja sama dengan orang-orang di seluruh dunia untuk mengembangkan dan menyampaikan solusi inovatif yang melindungi komunitas, satwa liar, dan tempat-tempat tempat mereka tinggal.
+    &lt;/blockquote&gt;
+        </code>
+    </div>
+<hr>
+   <h2>HTML &lt;q&gt; untuk Kutipan Pendek</h2>
+   <p>Tag HTML &lt;q&gt;mendefinisikan kutipan pendek.
+    Peramban biasanya menyisipkan tanda kutip di sekitar kutipan.</p>
+    <div class="code-preview-box">
+        <code>
+            <h2><b>Contoh</b></h2>
+            <p>WWF's goal is to: &lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;</p>
+        </code>
+    </div>
+<hr>
+    <h2>HTML &lt;abbr&gt; untuk Singkatan</h2>
+    <p>Tag HTML &lt;abbr&gt;mendefinisikan singkatan atau akronim, seperti "HTML", "CSS", "Tuan", "Dr.", "ASAP", "ATM".
+    Menandai singkatan dapat memberikan informasi yang berguna bagi peramban, sistem penerjemahan, dan mesin pencari.</p>
+    <p><strong>Kiat:</strong> Gunakan atribut judul global untuk menampilkan deskripsi singkatan/akronim saat Anda mengarahkan kursor ke elemen tersebut.</p>
+    <div class="code-preview-box">
+        <code>
+            <h2><b>Contoh</b></h2>
+            <p>The &lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in 1948.</p>
+<hr>
+            <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        </code>
+</div>
+<hr>
+    <h2>HTML &lt;alamat&gt; untuk Informasi Kontak</h2>
+    <p>Tag HTML &lt;address&gt; mendefinisikan informasi kontak untuk penulis/pemilik dokumen atau artikel.</p> 
+    <p>Informasi kontak dapat berupa <strong>alamat email</strong>, <strong>URL</strong>, alamat fisik, nomor telepon, pegangan media sosial, dll.</p>
+    <p>Teks dalam &lt;address&gt; elemen biasanya ditampilkan dalam huruf miring, dan peramban akan selalu menambahkan jeda baris sebelum dan sesudah &lt;address&gt; elemen.</p>
+    <div class="code-preview-box">
+        <code>
+            <h2><b>Contoh</b></h2>
+            <address>
+                Written by John Doe.<br>
+                Visit us at:<br>
+                Example.com<br>
+                Box 564, Disneyland<br>
+                USA
+                </address>
+        </code>
+    </div>
+    <h2>HTML &lt;cite&gt; Judul Karya</h2>
+    <p>Tag HTML &lt;cite&gt; mendefinisikan judul suatu karya kreatif (misalnya buku, puisi, lagu, film, lukisan, patung, dll.).</p>
+    <p><strong>Catatan:</strong> Nama seseorang bukanlah judul suatu karya.</p>
+    <p>Teks dalam &lt;cite&gt; elemen biasanya ditampilkan dalam <em>huruf miring</em>.</p>
+    <div class="code-preview-box">
+        <code>
+            <h2><b>Contoh</b></h2>
+            <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+        </code>
+    </div>
+    <h2>HTML &lt;bdo&gt; untuk Penimpaan Dua Arah</h2>
+    <p>BDO singkatan dari Bi-Directional Override.
+    Tag HTML &lt;bdo&gt; digunakan untuk mengganti arah teks saat ini:</p>
+    <div class="code-preview-box">
+        <code>
+            <h2><b>Contoh</b></h2>
+            <bdo dir="rtl">This text will be written from right to left</bdo>
+        </code>
+    </div>
+
+</body>
+</html>

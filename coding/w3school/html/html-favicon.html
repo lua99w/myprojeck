@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | FAVICON </title>
+    <style>
+        table {
+      width: auto;
+      margin: 20px 0;
+      border-collapse: collapse;
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+        .code-info {
+        color: red; 
+        padding: 1px; 
+        background-color: #8f8f8fdc
+        }
+        hr {
+        border: none;
+        height: 5px;
+        background-image: linear-gradient(90deg, blue, purple, pink, blue, purple, pink);
+        background-size: 300% 100%;
+        animation: moveLine 3s linear infinite;
+        }
+
+        @keyframes moveLine {
+            0%  {
+            background-position: 100% 0;
+            }
+            100% {
+            background-position: -100% 0;
+            }
+        }
+        #code-url {
+            color: red; 
+            padding: 1px; 
+            background-color: 
+            #8f8f8fdc;
+        }
+
+
+        #biru {
+            color: rgb(0, 135, 245);
+        }
+        
+        html, body {
+            cursor: url("cutom-cursor.png"), auto;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            font-weight: normal;
+            color: #333;
+            background-color: #c9f7ff;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .catatan {
+            background-color: #51c760;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        .catatan p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #313131;
+        }
+
+        .ringkasan {
+            margin-left: 20px;
+        }
+
+        .header-no-one {
+            margin: 40px 40px 0;
+        }
+
+        .code-preview-box {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 0;
+        font-family: "Fira Code", monospace;
+        font-size: 13px;
+        color: #333;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .code-preview-box code {
+        display: block;
+        background-color: #e8e8e8;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 13px;
+        overflow-x: auto;
+        max-height: 250px;
+        font-family: "Fira Code", monospace;
+        line-height: 1.4;
+    }
+
+
+    p {
+        margin-left: 20px;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+        
+
+
+    h2 {
+        margin-left: 20px;
+        font-size: 1.6em;
+        color: #333;
+        margin-bottom: 3px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-no-one">
+        <strong>
+            <h1>FAVICON</h1>
+        </strong>
+    </div>
+    <P>Favicon adalah gambar kecil yang ditampilkan di samping judul halaman di tab browser.</P>
+    <H2>Cara Menambahkan Favicon di HTML</H2>
+    Anda dapat menggunakan gambar apa pun yang Anda suka sebagai favicon. Anda juga dapat membuat favicon sendiri di situs seperti <a href="https://www.favicon.cc" target="_blank">www.favicon.cc</a>
+        <div class="catatan"><p>Tips: Favicon adalah gambar kecil, jadi harus berupa gambar sederhana dengan kontras tinggi.</p></div>
+        <p>Gambar favicon ditampilkan di sebelah kiri judul halaman di tab browser, seperti ini:</p>
+        <img src="https://www.w3schools.com/html/img_favicon.png" alt="Contoh favicon" style="max-width:100%;height:82px;">
+        <p>Untuk menambahkan favicon ke situs web Anda, simpan gambar favicon Anda ke direktori akar server web</p>
+        <p>Anda, atau buat folder di direktori akar yang disebut gambar, dan simpan gambar favicon Anda di folder ini</p>
+        <p>Nama umum untuk gambar favicon adalah "favicon.ico".</p>
+        <p>Selanjutnya, tambahkan <span class="code-info"><code>&lt;link&gt;</code></span></code>elemen ke file "index.html" Anda, setelah <code style="color: red; padding: 1px; background-color: #8f8f8fdc;">&lt;tittle&gt;</code>elemen, seperti ini:</p>
+        <div class="code-preview-box">
+            <h2>Contoh</h2>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;title&gt;My Page Title&lt;/title&gt;
+                &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;h1&gt;This is a Heading&lt;/h1&gt;
+                &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </div>
+       <p>Sekarang, simpan berkas "index.html" dan muat ulang di peramban Anda. Tab peramban Anda sekarang akan menampilkan gambar favicon di sebelah kiri judul halaman.</p>
+       <h2>Dukungan Format File Favicon</h2>
+       <p>Tabel berikut menunjukkan dukungan format file untuk gambar favicon:</p>
+       <table border="1" cellspacing="0" cellpadding="8" style="margin-left: 20px;">
+        <thead>
+          <tr>
+            <th>Browser</th>
+            <th>ICO</th>
+            <th>PNG</th>
+            <th>GIF</th>
+            <th>JPEG</th>
+            <th>SVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Edge</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Chrome</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Firefox</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Opera</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Safari</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+</body>
+</html>
